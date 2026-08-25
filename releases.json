@@ -5,6 +5,13 @@
       "version": "v1.3.0-governance-lifecycle",
       "migrates_from": [],
       "migration": null
+    },
+    {
+      "version": "v1.4.0-governance-portability",
+      "migrates_from": [
+        "v1.3.0-governance-lifecycle"
+      ],
+      "migration": "migrations/v1.3.0-governance-lifecycle-to-v1.4.0-governance-portability/manifest.json"
     }
   ]
 }
