@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "protocol_version": "v1.4.1-governance-portability-compatibility",
+  "roles": ["Product Owner / Reviewer", "Architect", "Implementer"],
+  "targets": ["Product Owner / Reviewer", "Architect", "Implementer"],
+  "result_statuses": ["success", "blocked", "protocol-invalid"],
+  "blocker_categories": [
+    "tool-unavailable",
+    "credential-invalid",
+    "repository-unauthorized",
+    "network-unreachable",
+    "runtime-capability-denied",
+    "workspace-inaccessible",
+    "operation-not-permitted",
+    "authoritative-state-conflict"
+  ],
+  "triggers": [
+    {"id": "bootstrap-architect", "template": "Bootstrap Architect", "target": "Architect", "terminal_state_class": "read-only", "permitted_successors": [], "human_decision_boundary": false},
+    {"id": "bootstrap-implementer", "template": "Bootstrap Implementer", "target": "Implementer", "terminal_state_class": "read-only", "permitted_successors": [], "human_decision_boundary": false},
+    {"id": "check-governance-baseline", "template": "Check governance baseline", "target": "Implementer", "terminal_state_class": "read-only", "permitted_successors": [], "human_decision_boundary": false},
+    {"id": "synchronize-governance", "template": "Synchronize governance to <version>", "target": "Implementer", "terminal_state_class": "prepared", "permitted_successors": [], "human_decision_boundary": true},
+    {"id": "prepare-initial-repository", "template": "Prepare initial repository", "target": "Implementer", "terminal_state_class": "prepared", "permitted_successors": ["Publish initial repository"], "human_decision_boundary": true},
+    {"id": "publish-initial-repository", "template": "Publish initial repository", "target": "Implementer", "terminal_state_class": "submitted", "permitted_successors": ["Bootstrap Architect", "Bootstrap Implementer"], "human_decision_boundary": true},
+    {"id": "architect-prepare-issue-specification", "template": "Architect prepare Issue specification <identifier>", "target": "Architect", "terminal_state_class": "prepared", "permitted_successors": ["Publish issue specification <identifier>"], "human_decision_boundary": true},
+    {"id": "publish-issue-specification", "template": "Publish issue specification <identifier>", "target": "Implementer", "terminal_state_class": "submitted", "permitted_successors": ["Issue #N created"], "human_decision_boundary": false},
+    {"id": "issue-created", "template": "Issue #N created", "target": "Architect", "terminal_state_class": "decision", "permitted_successors": ["Architect prepare implementation for Issue #N"], "human_decision_boundary": false},
+    {"id": "architect-prepare-implementation", "template": "Architect prepare implementation for Issue #N", "target": "Architect", "terminal_state_class": "prepared", "permitted_successors": ["Implement issue #N and prepare submission"], "human_decision_boundary": false},
+    {"id": "implement-issue", "template": "Implement issue #N", "target": "Implementer", "terminal_state_class": "prepared", "permitted_successors": ["Validate implementation", "Review documentation impact", "Prepare submission"], "human_decision_boundary": false},
+    {"id": "implement-and-submit", "template": "Implement issue #N and prepare submission", "target": "Implementer", "terminal_state_class": "submitted", "permitted_successors": ["Architect review PR #N"], "human_decision_boundary": true},
+    {"id": "validate-implementation", "template": "Validate implementation", "target": "Implementer", "terminal_state_class": "read-only", "permitted_successors": ["Review documentation impact", "Prepare submission"], "human_decision_boundary": false},
+    {"id": "review-documentation-impact", "template": "Review documentation impact", "target": "Implementer", "terminal_state_class": "prepared", "permitted_successors": ["Prepare submission"], "human_decision_boundary": false},
+    {"id": "prepare-submission", "template": "Prepare submission", "target": "Implementer", "terminal_state_class": "submitted", "permitted_successors": ["Architect review PR #N"], "human_decision_boundary": true},
+    {"id": "architect-review-pr", "template": "Architect review PR #N", "target": "Architect", "terminal_state_class": "decision", "permitted_successors": [], "human_decision_boundary": true},
+    {"id": "merge-pr", "template": "Merge PR #N", "target": "Implementer", "terminal_state_class": "merged", "permitted_successors": ["PR #N merged"], "human_decision_boundary": true},
+    {"id": "pr-merged", "template": "PR #N merged", "target": "Implementer", "terminal_state_class": "cleaned", "permitted_successors": ["Architect review issue #N"], "human_decision_boundary": false},
+    {"id": "architect-review-issue", "template": "Architect review issue #N", "target": "Architect", "terminal_state_class": "decision", "permitted_successors": ["Close issue #N with architect comment"], "human_decision_boundary": true},
+    {"id": "close-issue", "template": "Close issue #N with architect comment", "target": "Implementer", "terminal_state_class": "closed", "permitted_successors": ["Issue #N closed"], "human_decision_boundary": true},
+    {"id": "issue-closed", "template": "Issue #N closed", "target": "Architect", "terminal_state_class": "decision", "permitted_successors": [], "human_decision_boundary": false},
+    {"id": "create-tag", "template": "Create tag <tag-name>", "target": "Implementer", "terminal_state_class": "tagged", "permitted_successors": [], "human_decision_boundary": true},
+    {"id": "audit-workspace", "template": "Audit workspace", "target": "Implementer", "terminal_state_class": "read-only", "permitted_successors": [], "human_decision_boundary": false}
+  ]
+}
