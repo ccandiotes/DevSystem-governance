@@ -1,0 +1,202 @@
+{
+  "schema_version": 2,
+  "migration_type": "governance-baseline",
+  "source_version": "v1.3.0-governance-lifecycle",
+  "target_version": "v1.4.1-governance-portability-compatibility",
+  "source_public_repository": "ccandiotes/DevSystem-governance",
+  "source_public_manifest_url": "https://raw.githubusercontent.com/ccandiotes/DevSystem-governance/main/releases.json",
+  "source_product_commit": "03f06953357290174996ac8ec2f32c1fd025cacd",
+  "payload_root": "payload",
+  "files": [
+    {
+      "path": ".devsystem/governance.json",
+      "ownership": "mixed",
+      "action": "deferred-metadata",
+      "source_sha256": "5ad687b379dec6a4e557558f0ae74acd297d96e9668f37710acebdb14b7421b7",
+      "target_sha256": "5ad687b379dec6a4e557558f0ae74acd297d96e9668f37710acebdb14b7421b7"
+    },
+    {
+      "path": ".devsystem/handoffs/README.md",
+      "ownership": "upstream-managed",
+      "action": "add",
+      "source_sha256": null,
+      "target_sha256": "d925d0dddcfe68107c549d4531fcda1b7efa32ac840b718821ddea96fc59b954"
+    },
+    {
+      "path": ".devsystem/protocol.json",
+      "ownership": "upstream-managed",
+      "action": "add",
+      "source_sha256": null,
+      "target_sha256": "ceb319d8824805bb75315613b6fea0d8d8d39b0f648ee1f21787088d97981a46"
+    },
+    {
+      "path": ".devsystem/schema/governance-contracts.schema.json",
+      "ownership": "upstream-managed",
+      "action": "add",
+      "source_sha256": null,
+      "target_sha256": "20d6fa8db38913e294ace38e9fb6e7e16884502c92d3860e7537582ff6c58515"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug-report.md",
+      "ownership": "upstream-managed",
+      "action": "replace",
+      "source_sha256": "60cf0b67cef871d65e3a4b4e79fd809be998ad54ece0c37f9e10270a70984872",
+      "target_sha256": "60cf0b67cef871d65e3a4b4e79fd809be998ad54ece0c37f9e10270a70984872"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/decision-record.md",
+      "ownership": "upstream-managed",
+      "action": "replace",
+      "source_sha256": "0cdba208fa1fbb8a9baa50ef80ccc33ea644070e4d9cc2856fbf0a32df8c852d",
+      "target_sha256": "0cdba208fa1fbb8a9baa50ef80ccc33ea644070e4d9cc2856fbf0a32df8c852d"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/implementation-issue.md",
+      "ownership": "upstream-managed",
+      "action": "replace",
+      "source_sha256": "559a851fb275ce190ce6bb026419118af27c9486515f36a03bfc491b23ed5bd7",
+      "target_sha256": "559a851fb275ce190ce6bb026419118af27c9486515f36a03bfc491b23ed5bd7"
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "ownership": "upstream-managed",
+      "action": "replace",
+      "source_sha256": "212542f7ebf9285cba5185b27062fb0a5faa7fb7e061ee74975b201f97446d97",
+      "target_sha256": "212542f7ebf9285cba5185b27062fb0a5faa7fb7e061ee74975b201f97446d97"
+    },
+    {
+      "path": "AGENTS.md",
+      "ownership": "upstream-managed",
+      "action": "replace",
+      "source_sha256": "a397296490911c7bb5eeffe418b6f677312c4b86dd3be3e2880abd58da5e256d",
+      "target_sha256": "ed19332a1605b004af0d6a0ea11dafbf7419520d888f19373588342362ee68fd"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "ownership": "project-owned",
+      "action": "preserve",
+      "source_sha256": "cfcaaf8a709599d6391dcc7a251bc74173491469e730e93b8d731fd84ac9bc7f",
+      "target_sha256": null
+    },
+    {
+      "path": "DECISIONS.md",
+      "ownership": "project-owned",
+      "action": "preserve",
+      "source_sha256": "8340a3c78aaf2640003e012fbe4742831f65cd8e02d444d3662f35c1b0bf6500",
+      "target_sha256": null
+    },
+    {
+      "path": "PLANNED_FEATURES.md",
+      "ownership": "project-owned",
+      "action": "preserve",
+      "source_sha256": "ad21ddf85d219d6becf095994817547e3fc02d134182f54591dc961e6ada0e6c",
+      "target_sha256": null
+    },
+    {
+      "path": "PROJECT.md",
+      "ownership": "project-configured",
+      "action": "render",
+      "source_sha256": "89e1632339cadd5812650f94c1972bea23d7229ee27e2ac0edda6d541e05958d",
+      "target_sha256": "487a6d51007c5eb94958d31972ec443203bc4c27ab2255bdd49a784a435b8f90"
+    },
+    {
+      "path": "README.md",
+      "ownership": "project-configured",
+      "action": "render",
+      "source_sha256": "8c4842c9f5830b1c4fa3c5d678be96e73d4d09f2070b7a0505c099bac2b1b27b",
+      "target_sha256": "5f874f26c0b8cfb3f47f00fc82f32b8d4845d9140879323ba4452a13415871da"
+    },
+    {
+      "path": "docs/deployment.md",
+      "ownership": "upstream-managed",
+      "action": "add",
+      "source_sha256": null,
+      "target_sha256": "ce44028a963553d1d9bf38cf9c26f12f0befed636ea6fb825f2c3690ad126fd4"
+    },
+    {
+      "path": "docs/governed_handoffs.md",
+      "ownership": "upstream-managed",
+      "action": "add",
+      "source_sha256": null,
+      "target_sha256": "5afc50cfa0a816cf1e670f9314017f1aab0a12376be30c0f8c914d61a3894dae"
+    },
+    {
+      "path": "docs/workflow_reference.md",
+      "ownership": "upstream-managed",
+      "action": "replace",
+      "source_sha256": "2b7df2bda487bab1d3bc82abb4243e0db8853ae582207276f4ee04a77358cd54",
+      "target_sha256": "7e2edae97f68c71cdc8cbdf483d04650a145a5b7ddc671e8e0a77c071ad059d3"
+    }
+  ],
+  "source_variants": [
+    {
+      "id": "released-template-03f0695",
+      "source_repository": "ccandiotes/DevSystem",
+      "source_product_commit": "03f06953357290174996ac8ec2f32c1fd025cacd",
+      "files": []
+    },
+    {
+      "id": "deployed-lifecycle-58065a1",
+      "source_repository": "ccandiotes/elexon_ConfiguratorDBTransfer",
+      "source_product_commit": "58065a165d24d5fa552c0b1322da0d988b6c1348",
+      "files": [
+        {
+          "path": ".devsystem/handoffs/README.md",
+          "ownership": "upstream-managed",
+          "action": "replace",
+          "source_sha256": "d925d0dddcfe68107c549d4531fcda1b7efa32ac840b718821ddea96fc59b954",
+          "target_sha256": "d925d0dddcfe68107c549d4531fcda1b7efa32ac840b718821ddea96fc59b954",
+          "source_match": "exact"
+        },
+        {
+          "path": "AGENTS.md",
+          "ownership": "upstream-managed",
+          "action": "replace",
+          "source_sha256": "5276796089729b3b19337edd0ae72d28da9a7b17df5a5f2d9c0bf3e195db1e1b",
+          "target_sha256": "ed19332a1605b004af0d6a0ea11dafbf7419520d888f19373588342362ee68fd",
+          "source_match": "exact"
+        },
+        {
+          "path": "PROJECT.md",
+          "ownership": "project-configured",
+          "action": "advance-version",
+          "source_sha256": "644745da5d913fc1cdf0fef50d9a8d18addf62b57341ffa6a3a7ab0e1472de37",
+          "target_sha256": null,
+          "source_match": "present"
+        },
+        {
+          "path": "README.md",
+          "ownership": "project-configured",
+          "action": "preserve",
+          "source_sha256": "9bfe526d061bc5e714268d0896469341236adea6abd52af21940d94899e9aaad",
+          "target_sha256": null,
+          "source_match": "present"
+        },
+        {
+          "path": "docs/governed_handoffs.md",
+          "ownership": "upstream-managed",
+          "action": "replace",
+          "source_sha256": "a811f5fce32d4642edc65d401c38d49e1f1c454a070c13b9f3a63eca44be1a4c",
+          "target_sha256": "5afc50cfa0a816cf1e670f9314017f1aab0a12376be30c0f8c914d61a3894dae",
+          "source_match": "exact"
+        },
+        {
+          "path": "docs/deployment.md",
+          "ownership": "project-owned",
+          "action": "preserve",
+          "source_sha256": "8d812f1c12f2dd5ada4a7e6301be0b8eca8876b871dcdab063a8d7ec8bd659d1",
+          "target_sha256": null,
+          "source_match": "present"
+        },
+        {
+          "path": "docs/workflow_reference.md",
+          "ownership": "project-configured",
+          "action": "preserve",
+          "source_sha256": "55765116f103a40ba6e66b25747b5d4386c09900fdc4eaf70dd857c9243d06e6",
+          "target_sha256": null,
+          "source_match": "present"
+        }
+      ]
+    }
+  ]
+}

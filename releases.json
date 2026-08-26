@@ -12,6 +12,13 @@
         "v1.3.0-governance-lifecycle"
       ],
       "migration": "migrations/v1.3.0-governance-lifecycle-to-v1.4.0-governance-portability/manifest.json"
+    },
+    {
+      "version": "v1.4.1-governance-portability-compatibility",
+      "migrates_from": [
+        "v1.3.0-governance-lifecycle"
+      ],
+      "migration": "migrations/v13-v141-compat/manifest.json"
     }
   ]
 }
